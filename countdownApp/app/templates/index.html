@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8" />
+        <title>Countdown</title>
+        <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename='main.css')}}">
+    </head>
+    <body>
+        <h1>This countdown is counting down to someone's birthday!</h1>
+
+        <div id = "boxed">
+            <p id = "clock">Loading...</p>
+            <script>
+                var clock = document.getElementById("clock");
+
+                setInterval(() => {
+                    fetch("{{ url_for('time_feed') }}")
+                    .then(response => {response.text()
+                    .then(time => {clock.innerHTML = time})});
+                    }, 1000);  
+            </script>
+        </div>
+
+        <form action = "guess" method = "POST">
+            {% for message in get_flashed_messages()%}
+                <p> {{message}} </p>
+            {% endfor %}
+            <br>
+            <input type = "text" name = "answer">
+            <br>
+            <input type = "Submit" value = "GUESS" id = "guess">
+        </form>
+    </body>
+    <footer>
+        <p>Can't figure it out? Press <a href="https://www.apple.com">here</a> for hint 
+                                    or <a href="https://www.apple.com/stevejobs/">here</a> for answer!</p>
+    </footer>
+</html>

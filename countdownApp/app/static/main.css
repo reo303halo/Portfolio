@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(162, 167, 172);
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-family: Shanti;
+    font-size: 1.6em;
+    margin: 20px;
+}
+
+p {
+    color: white;
+    font-family: Shanti;
+    font-size: 1.4em;
+    margin: 20px;
+}
+
+input {
+    width: 210px;
+    height: 40px;
+    margin: 15px;
+    border: none;
+    border-radius: 10px;
+    font-family: Shanti;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+input:focus {
+    border: solid 5px #00FFCE;
+    outline: none;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    font-size: 0.7em;
+}
+
+#boxed {
+    width: 550px;
+    height: 130px;
+    margin: auto;
+    padding: 50px 0;
+    border: solid 5px mediumvioletred;
+    background-color: palevioletred;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#clock {
+    color: white;
+    font-family: Shanti;
+    font-size: 2.0em;
+    text-align: center;
+}
+
+#guess {
+    background-color: palevioletred;
+    color: white;
+    width: 200px;
+}
+
+#guess:hover {
+    background-color: mediumvioletred;
+    cursor: pointer;
+}
