@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>import Foundation
+
+class Pokemon {
+    var number: String
+    var name: String
+    var type: String
+    var location: String
+    
+    init(number: String, name: String, type: String, location: String) {
+        self.number = String(format: "%03d", number)
+        self.name = name
+        self.type = type
+        self.location = location
+    }
+    
+    func printInfo() {
+        print("Number: \(number)\nName: \(name)\nType: \(type)\nLocation:\n\(location).")
+    }
+}
+
+
+//Test 
+var fuecoco = Pokemon(number: "4", name: "Fuecoco", type: "Fire", location: "Starter Pokemon, recieved from Director Clavell")
+
+fuecoco.printInfo()
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 629}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
